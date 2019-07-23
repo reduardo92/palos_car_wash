@@ -1,0 +1,91 @@
+:root {
+  /* typography */
+
+  --ff-title: 'PT Sans', sans-serif;
+  --ff-body: 'Raleway', sans-serif;
+
+  --fw-normal: 400;
+  --fw-bold: 700;
+
+  --fs-regular: normal;
+  --fs-italic: italic;
+
+  /* Colors */
+
+  --clr-red: #e13035;
+  --clr-blue: #23a0dc;
+  --clr-blue-dark: #2e7aac;
+  --clr-white: #fff;
+  --clr-footer-bottom: #24292d;
+  --clr--red-gradient: linear-gradient(
+    to bottom,
+    rgba(225, 48, 54, 1) 0%,
+    rgba(204, 45, 53, 1) 100%
+  );
+
+  --clr-title: #424950;
+  --clr-title-sub: #fff;
+  --clr-text-dark: #575757;
+  --clr-text-light: #dfdfdf;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--ff-body);
+  font-size: 1.3125rem;
+  line-height: 1.5;
+  color: var(-clr-text-dark);
+  font-weight: var(-fw-normal);
+  overflow-x: hidden;
+}
+
+/* section */
+.section {
+  margin: 6em auto;
+}
+
+/* Boostrap Btn */
+.btn {
+  color: var(--clr-white);
+  font-weight: var(--fw-bold);
+  transition: all 0.35s ease-in-out;
+}
+
+/* Boostrap Modal */
+.modal-backdrop.show {
+  opacity: 0.9;
+}
+
+.modal-content {
+  background-color: transparent;
+  border: none;
+}
+
+.modal-header {
+  border: none;
+}
+
+.modal-header button {
+  outline: none;
+  border: none;
+}
+.modal-header button span {
+  color: white;
+  font-size: 2.5rem;
+  transition: color 0.3s ease-in;
+}
+.modal-header button span:hover {
+  color: var(--clr-red);
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
