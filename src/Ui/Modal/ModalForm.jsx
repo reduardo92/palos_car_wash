@@ -114,7 +114,6 @@ const ModalFormDetail = () => {
   const { modalShow, setModalShow } = useContext(Context);
 
   const { handleChange, handleSubmit, form, validated } = FormFunctions({
-    subject: 'Detail Appointment',
     name: '',
     email: '',
     hear: '',
@@ -144,7 +143,9 @@ const ModalFormDetail = () => {
       </Modal.Header>
       <Modal.Body>
         <Form
-          action='POST'
+          name='Detail Appointment'
+          method='POST'
+          data-netlify-recaptcha='true'
           data-netlify='true'
           noValidate
           validated={validated}

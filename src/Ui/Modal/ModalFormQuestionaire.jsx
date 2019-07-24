@@ -57,7 +57,6 @@ const ModalFormQuestionaire = () => {
   const { modalShow, setModalShow } = useContext(Context);
 
   const { handleChange, handleSubmit, form, validated } = FormFunctions({
-    subject: 'Questionaire',
     name: '',
     email: '',
     hear: '',
@@ -82,7 +81,9 @@ const ModalFormQuestionaire = () => {
       </Modal.Header>
       <Modal.Body>
         <Form
-          action='POST'
+          name='Questionaire'
+          method='POST'
+          data-netlify-recaptcha='true'
           data-netlify='true'
           noValidate
           validated={validated}

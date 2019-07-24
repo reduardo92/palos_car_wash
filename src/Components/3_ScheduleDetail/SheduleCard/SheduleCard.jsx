@@ -166,7 +166,6 @@ const SheduleCard = () => {
             <p>12101 South Ridgeland Ave. Palos Heights, IL 60463</p>
           </div>
           <Button
-            href='#formDetail'
             variant='red'
             onClick={() => {
               setModalShow({ show: true, for: 'formDetail' });
