@@ -18,12 +18,12 @@ const FormFunctions = initialState => {
     }
 
     setValidated(true);
-    console.log(form);
+    // console.log(form);
 
     if (e.currentTarget.checkValidity()) {
       setValidated(false);
       setForm(initialState);
-      console.log('form true', form);
+      // console.log('form true', form);
     }
   };
 
