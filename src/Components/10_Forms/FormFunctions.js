@@ -22,7 +22,7 @@ const FormFunctions = initialState => {
 
     if (e.currentTarget.checkValidity()) {
       setValidated(false);
-      setForm(initialState);
+      // setForm(initialState);
       // console.log('form true', form);
     }
   };
