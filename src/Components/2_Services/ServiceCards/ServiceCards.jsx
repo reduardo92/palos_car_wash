@@ -12,10 +12,6 @@ import unlimitedModal from '../../../assets/img/services/detailsCenter.png';
 
 const CardContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-  grid-row-gap: 2rem;
-  grid-column-gap: 30px;
-  align-items: end;
 
   .card-container_img {
     transition: transform 0.35s ease-in-out;
@@ -26,6 +22,18 @@ const CardContainer = styled.div`
       cursor: pointer;
       transform: scale(1.1);
     }
+  }
+
+  @media screen and (min-width: 760px) {
+    grid-template-columns: repeat(auto-fill, minmax(311px, 1fr));
+    grid-row-gap: 2rem;
+    align-items: end;
+  }
+
+  @media screen and (min-width: 1100px) {
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 30px;
   }
 `;
 
@@ -40,22 +48,20 @@ const ServiceCards = props => {
   const { setModalShow, setModalImg } = useContext(Context);
 
   return (
-    <>
-      <CardContainer className='card-container'>
-        {serviceCard.map(({ id, img, modalImg }) => (
-          <img
-            key={id}
-            className='card-container_img'
-            onClick={() => {
-              setModalShow({ show: true, for: 'img' });
-              setModalImg(modalImg);
-            }}
-            src={img}
-            alt={img}
-          />
-        ))}
-      </CardContainer>
-    </>
+    <CardContainer className='card-container'>
+      {serviceCard.map(({ id, img, modalImg }) => (
+        <img
+          key={id}
+          className='card-container_img'
+          onClick={() => {
+            setModalShow({ show: true, for: 'img' });
+            setModalImg(modalImg);
+          }}
+          src={img}
+          alt={img}
+        />
+      ))}
+    </CardContainer>
   );
 };
 
