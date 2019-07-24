@@ -144,9 +144,8 @@ const ModalFormDetail = () => {
       </Modal.Header>
       <Modal.Body>
         <Form
-          method='POST'
+          action='POST'
           data-netlify='true'
-          data-netlify-recaptcha='true'
           noValidate
           validated={validated}
           onSubmit={handleSubmit}
