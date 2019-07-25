@@ -14,7 +14,6 @@ import Contact from './Components/8_Contact/Contact';
 import Footer from './Components/9_Footer/Footer';
 import ModalFormDetail from './Ui/Modal/ModalForm';
 import ModalFormQuestionaire from './Ui/Modal/ModalFormQuestionaire';
-import TestForm from './Components/10_Forms/TestForm';
 
 const App = () => (
   <StateProvider>
@@ -27,7 +26,6 @@ const App = () => (
       <Coupons />
       <Reviews />
       <Gallery />
-      <TestForm />
       <Contact />
     </Container>
     <Footer />

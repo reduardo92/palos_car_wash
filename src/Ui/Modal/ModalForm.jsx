@@ -113,20 +113,23 @@ const formlayout = {
 const ModalFormDetail = () => {
   const { modalShow, setModalShow } = useContext(Context);
 
-  const { handleChange, handleSubmit, form, validated } = FormFunctions({
-    name: '',
-    email: '',
-    hear: '',
-    detail: '',
-    dayWeek: '',
-    time: '',
-    phone: '',
-    vehicle: '',
-    model: '',
-    month: '',
-    day: '',
-    comments: ''
-  });
+  const { handleChange, handleSubmit, form, validated } = FormFunctions(
+    {
+      name: '',
+      email: '',
+      hear: '',
+      detail: '',
+      dayWeek: '',
+      time: '',
+      phone: '',
+      vehicle: '',
+      model: '',
+      month: '',
+      day: '',
+      comments: ''
+    },
+    'Detail Appointment'
+  );
 
   return (
     <ModalStyle
@@ -151,6 +154,7 @@ const ModalFormDetail = () => {
           validated={validated}
           onSubmit={handleSubmit}
         >
+          <input type='hidden' name='form-name' value='Detail Appointment' />
           <Form.Row>
             {/* Name */}
             <Form.Group as={Col} sm controlId='name'>

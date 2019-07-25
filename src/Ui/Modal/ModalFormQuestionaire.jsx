@@ -56,17 +56,20 @@ const formlayout = {
 const ModalFormQuestionaire = () => {
   const { modalShow, setModalShow } = useContext(Context);
 
-  const { handleChange, handleSubmit, form, validated } = FormFunctions({
-    name: '',
-    email: '',
-    hear: '',
-    visited: '',
-    review: '',
-    stars: '',
-    fair: '',
-    employees: '',
-    other: ''
-  });
+  const { handleChange, handleSubmit, form, validated } = FormFunctions(
+    {
+      name: '',
+      email: '',
+      hear: '',
+      visited: '',
+      review: '',
+      stars: '',
+      fair: '',
+      employees: '',
+      other: ''
+    },
+    'Questionaire'
+  );
 
   return (
     <ModalStyle
@@ -89,6 +92,7 @@ const ModalFormQuestionaire = () => {
           validated={validated}
           onSubmit={handleSubmit}
         >
+          <input type='hidden' name='form-name' value='Questionaire' />
           <Form.Row>
             {/* Name */}
             <Form.Group as={Col} sm controlId='name'>
