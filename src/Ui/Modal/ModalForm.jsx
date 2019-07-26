@@ -113,7 +113,7 @@ const formlayout = {
 const ModalFormDetail = () => {
   const { modalShow, setModalShow } = useContext(Context);
 
-  const { handleChange, handleSubmit, form, validated } = FormFunctions(
+  const { handleChange, handleSubmit, form, validated, msg } = FormFunctions(
     {
       name: '',
       email: '',
@@ -142,7 +142,7 @@ const ModalFormDetail = () => {
       centered
     >
       <Modal.Header closeButton>
-        <Modal.Title>Detail Appointment</Modal.Title>
+        <Modal.Title>Detail Appointment {msg}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form

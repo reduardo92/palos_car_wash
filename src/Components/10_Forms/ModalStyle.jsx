@@ -18,6 +18,12 @@ const ModalStyle = styled(Modal)`
     font-family: var(--ff-title);
   }
 
+  .modal-title {
+    span {
+      display: block;
+    }
+  }
+
   .btn-outline-white {
     padding: 0.5rem 2.5rem;
     color: var(--clr-title);

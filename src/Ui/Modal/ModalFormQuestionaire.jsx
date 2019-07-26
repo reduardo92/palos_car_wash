@@ -56,7 +56,7 @@ const formlayout = {
 const ModalFormQuestionaire = () => {
   const { modalShow, setModalShow } = useContext(Context);
 
-  const { handleChange, handleSubmit, form, validated } = FormFunctions(
+  const { handleChange, handleSubmit, form, validated, msg } = FormFunctions(
     {
       name: '',
       email: '',
@@ -80,7 +80,7 @@ const ModalFormQuestionaire = () => {
       centered
     >
       <Modal.Header closeButton>
-        <Modal.Title>Questionaire</Modal.Title>
+        <Modal.Title>Questionaire {msg}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form
