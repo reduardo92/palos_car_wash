@@ -48,14 +48,15 @@ const FormFunctions = (initialState, formName) => {
         setMsg(
           <span className='alert alert-success'>message sent successfully</span>
         );
+        clearMsg();
       }
     } catch (err) {
       console.log(err);
       setMsg(
         <span className='alert alert-danger'>message sent unsuccessfully</span>
       );
+      clearMsg();
     }
-    clearMsg();
   };
 
   return { handleChange, handleSubmit, form, validated, msg };
