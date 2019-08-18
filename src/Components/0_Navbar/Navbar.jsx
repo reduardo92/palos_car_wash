@@ -55,7 +55,6 @@ const Style = styled.header`
 
     &:focus {
       outline: none;
-    }
 
     div {
       transition: transform 0.5s ease-in-out, color 0.5s ease-in-out,
