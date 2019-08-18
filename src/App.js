@@ -30,7 +30,6 @@ const App = () => (
     </Container>
     <Footer />
     <ModalImg />
-    {/* <ModalForm /> */}
     <ModalFormDetail />
     <ModalFormQuestionaire />
   </StateProvider>

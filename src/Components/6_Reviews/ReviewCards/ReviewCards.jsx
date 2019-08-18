@@ -4,9 +4,7 @@ import Context from '../../../Context/Context';
 
 const Styled = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
   max-width: 1200px;
-  grid-gap: 2em;
 
   /* review card's */
   .review--card {
@@ -23,6 +21,9 @@ const Styled = styled.div`
   }
 
   @media screen and (min-width: 760px) {
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    grid-gap: 2em;
+
     .review--card {
       display: flex;
       flex-direction: column;
@@ -31,6 +32,10 @@ const Styled = styled.div`
     .container--stars--name {
       margin-top: auto;
     }
+  }
+
+  @media screen and (min-width: 1100px) {
+    grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
   }
 `;
 

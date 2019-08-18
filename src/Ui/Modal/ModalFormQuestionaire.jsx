@@ -56,18 +56,20 @@ const formlayout = {
 const ModalFormQuestionaire = () => {
   const { modalShow, setModalShow } = useContext(Context);
 
-  const { handleChange, handleSubmit, form, validated } = FormFunctions({
-    subject: 'Questionaire',
-    name: '',
-    email: '',
-    hear: '',
-    visited: '',
-    review: '',
-    stars: '',
-    fair: '',
-    employees: '',
-    other: ''
-  });
+  const { handleChange, handleSubmit, form, validated, msg } = FormFunctions(
+    {
+      name: '',
+      email: '',
+      hear: '',
+      visited: '',
+      review: '',
+      stars: '',
+      fair: '',
+      employees: '',
+      other: ''
+    },
+    'Questionaire'
+  );
 
   return (
     <ModalStyle
@@ -78,17 +80,19 @@ const ModalFormQuestionaire = () => {
       centered
     >
       <Modal.Header closeButton>
-        <Modal.Title>Questionaire</Modal.Title>
+        <Modal.Title>Questionaire {msg}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form
+          name='Questionaire'
           method='POST'
-          data-netlify='true'
           data-netlify-recaptcha='true'
+          data-netlify='true'
           noValidate
           validated={validated}
           onSubmit={handleSubmit}
         >
+          <input type='hidden' name='form-name' value='Questionaire' />
           <Form.Row>
             {/* Name */}
             <Form.Group as={Col} sm controlId='name'>

@@ -21,6 +21,37 @@
     <title>Palos Auto Spa Carwash & Detail Center</title>
   </head>
   <body>
+    <!-- detail hidden form for netlify -->
+    <form name="Detail Appointment" netlify hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <select name="hear"></select>
+      <select name="detail"></select>
+      <select name="dayWeek"></select>
+      <select name="time"></select>
+      <select type="tel" name="phone"></select>
+      <select type="text" name="vehicle"></select>
+      <select type="text" name="model"></select>
+      <select name="month"></select>
+      <select name="day"></select>
+      <textarea name="comments"></textarea>
+      <div data-netlify-recaptcha="true"></div>
+    </form>
+
+    <!-- Questionaire hidden form for netlify -->
+    <form name="Questionaire" netlify hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <select name="hear"></select>
+      <select name="visited"></select>
+      <textarea name="review"></textarea>
+      <select name="stars"></select>
+      <select name="fair"></select>
+      <select name="employees"></select>
+      <textarea name="other"></textarea>
+      <div data-netlify-recaptcha="true"></div>
+    </form>
+
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
